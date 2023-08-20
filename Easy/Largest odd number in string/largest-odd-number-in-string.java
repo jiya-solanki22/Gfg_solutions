@@ -22,17 +22,15 @@ class Solution {
 
     String maxOdd(String S) {
         // code here
-        String ans = "", res = "";
-        int n = 0;
-        char s[]=S.toCharArray();
-
-        for(int i=0; i<s.length; i++){
-            ans += s[i];
-            n = s[i] - '0';
-
-            if(n % 2 !=0)
-                res = ans;
+        String ans = "";
+        for(int i=S.length()-1; i>=0; i--)
+        {
+            if(S.charAt(i) %2 !=0)
+            {
+                ans=S.substring(0,i+1);
+                return ans;
+            }
         }
-        return res;
+        return "";
     }
 }

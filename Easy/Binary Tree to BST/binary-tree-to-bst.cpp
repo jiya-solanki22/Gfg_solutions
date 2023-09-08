@@ -112,7 +112,7 @@ class Solution{
     void getArr(int arr[], int *index, Node *root)
     {
         if(root == NULL)
-            return ;
+            return;
         getArr(arr, index, root->left);
         arr[*index] = root->data;
         *index += 1;
